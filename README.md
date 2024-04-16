@@ -1,0 +1,2 @@
+# hexashop
+Shopify Theme
