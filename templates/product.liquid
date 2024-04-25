@@ -39,29 +39,32 @@
                         <li><i class="fa fa-star"></i></li>
                     </ul>
                     <span>{{product.description}}</span>
-                    
-                    <div class="quantity-content">
-                        <div class="left-content">
-                            <h6>No. of Orders</h6>
-                        </div>
-                        <div class="right-content">
-                            <div class="quantity buttons_added">
-                                <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                    <form action="/cart/add" method="post" id="add-to-cart-form">
+                        <div class="quantity-content">
+                            <div class="left-content">
+                                <h6>No. of Orders</h6>
                             </div>
-                        </div>
-                        {% form 'product', product %}
-                            <select name="id">
+                            <div class="right-content">
+                                <div class="quantity buttons_added">
+                                    <input type="button" value="-" class="minus"><input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode=""><input type="button" value="+" class="plus">
+                                </div>
+                            </div>
+                           
+                            <input type="hidden" name="id" value="{{ product.id }}">
+                            {% comment %} <input type="hidden" name="quantity" value="1"> {% endcomment %}
+                            <select name="id" style="display:none;">
                                 {% for variant in product.variants %}
                                     <option value="{{variant.id}}">{{variant.title}}</option>
                                 {% endfor %}
                             </select>
-                            <button type="submit">{{ 'General.add_to_cart' | t }}</button>
-                        {% endform %}
-                    </div>
-                    <div class="total">
-                        <h4>Total: {{ product.price | money_with_currency  }}</h4>
-                        <div class="main-border-button"><a href="#">Add To Cart</a></div>
-                    </div>
+                            
+                        </div>
+                    
+                        <div class="total">
+                            <h4>Total: {{ product.price | money_with_currency  }}</h4>
+                            <button class="btn btn-primary main-border-button" type="submit" id="add-to-cart-btn">Add To Cart</button>
+                        </div>
+                    </form>
                 </div>
             </div>
             </div>
