@@ -22,7 +22,9 @@
                 </div>
             </div>
         </form>
+        <br>
         <div class="row">
+            {% if search.results_count > 0 %}
         {% for item in search.results %}
            
                 {% if item.object_type == 'product' -%}        
@@ -31,7 +33,12 @@
                     No Products Found
                 {% endif %}
            
-        {% endfor %}    
+        {% endfor %}
+        {% else %}
+        <div class="col-12 text-center">
+            <h4>No Products Found!</h4>
+        </div>
+        {% endif %}
         </div>
     </div>
 </section>
