@@ -31,7 +31,7 @@
                                             <h4>Women</h4>
                                             <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
                                             <div class="main-border-button">
-                                                <a href="#">Discover More</a>
+                                                <a href="/collections/frontpage">Discover More</a>
                                             </div>
                                         </div>
                                     </div>
@@ -51,7 +51,7 @@
                                             <h4>Men</h4>
                                             <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
                                             <div class="main-border-button">
-                                                <a href="#">Discover More</a>
+                                                <a href="/collections/frontpage">Discover More</a>
                                             </div>
                                         </div>
                                     </div>
@@ -71,7 +71,7 @@
                                             <h4>Kids</h4>
                                             <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
                                             <div class="main-border-button">
-                                                <a href="#">Discover More</a>
+                                                <a href="/collections/frontpage">Discover More</a>
                                             </div>
                                         </div>
                                     </div>
@@ -91,7 +91,7 @@
                                             <h4>Accessories</h4>
                                             <p>Lorem ipsum dolor sit amet, conservisii ctetur adipiscing elit incid.</p>
                                             <div class="main-border-button">
-                                                <a href="#">Discover More</a>
+                                                <a href="/collections/frontpage">Discover More</a>
                                             </div>
                                         </div>
                                     </div>
@@ -136,7 +136,7 @@
                                         <ul>
                                             <li><a href="{{ product.url }}"><i class="fa fa-eye"></i></a></li>
                                             <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                            <li><a href="/cart/add?id={{ product.id }}&quantity=1&variant={{ product.first_available_variant.id}}"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
                                     {% if product.images.size > 0 %}
@@ -196,7 +196,7 @@
                                         <ul>
                                             <li><a href="{{ product.url }}"><i class="fa fa-eye"></i></a></li>
                                             <li><a href="single-product.html"><i class="fa fa-star"></i></a></li>
-                                            <li><a href="single-product.html"><i class="fa fa-shopping-cart"></i></a></li>
+                                            <li><a href="/cart/add?id={{ product.id }}&quantity=1&variant={{ variant.id }}"><i class="fa fa-shopping-cart"></i></a></li>
                                         </ul>
                                     </div>
                                     {% if product.images.size > 0 %}
@@ -359,7 +359,7 @@
                     <p>There are 5 pages included in this HexaShop Template and we are providing it to you for absolutely free of charge at our TemplateMo website. There are web development costs for us.</p>
                     <p>If this template is beneficial for your website or business, please kindly <a rel="nofollow" href="https://paypal.me/templatemo" target="_blank">support us</a> a little via PayPal. Please also tell your friends about our great website. Thank you.</p>
                     <div class="main-border-button">
-                        <a href="products.html">Discover More</a>
+                        <a href="/collections/frontpage">Discover More</a>
                     </div>
                 </div>
             </div>

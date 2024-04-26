@@ -18,6 +18,9 @@
         {{ 'css/templatemo-hexashop.css' | asset_url | stylesheet_tag}}
         {{ 'css/owl-carousel.css' | asset_url | stylesheet_tag}}
         {{ 'css/lightbox.css' | asset_url | stylesheet_tag}}
+
+        <!-- custom css -->
+        {{ 'custom.css' | asset_url | stylesheet_tag}}
       
     </head>
     <body>
@@ -35,5 +38,52 @@
         {{content_for_layout}}
 
         {% render 'footer' %}
+
+        
+    <!-- jQuery -->
+    {{ 'js/jquery-2.1.0.min.js' | asset_url | script_tag}}
+
+
+    <!-- Bootstrap -->
+    {{ 'js/popper.js' | asset_url | script_tag}}
+    {{ 'js/bootstrap.min.js' | asset_url | script_tag}}
+
+
+    <!-- Plugins -->
+    {{ 'js/owl-carousel.js' | asset_url | script_tag}}
+    {{ 'js/accordions.js' | asset_url | script_tag}}
+    {{ 'js/datepicker.js' | asset_url | script_tag}}
+    {{ 'js/scrollreveal.min.js' | asset_url | script_tag}}
+    {{ 'js/waypoints.min.js' | asset_url | script_tag}}
+    {{ 'js/jquery.counterup.min.js' | asset_url | script_tag}}
+    {{ 'js/imgfix.min.js' | asset_url | script_tag}}
+    {{ 'js/slick.js' | asset_url | script_tag}}
+    {{ 'js/lightbox.js' | asset_url | script_tag}}
+    {{ 'js/isotope.js' | asset_url | script_tag}}
+    {{ 'js/quantity.js' | asset_url | script_tag}}
+
+    <!-- Global Init -->
+    {{ 'js/custom.js' | asset_url | script_tag}}
+
+    {{ 'custom.js' | asset_url | script_tag}}
+
+
+    <script>
+
+        $(function() {
+            var selectedClass = "";
+            $("p").click(function(){
+            selectedClass = $(this).attr("data-rel");
+            $("#portfolio").fadeTo(50, 0.1);
+                $("#portfolio div").not("."+selectedClass).fadeOut();
+            setTimeout(function() {
+            $("."+selectedClass).fadeIn();
+            $("#portfolio").fadeTo(50, 1);
+            }, 500);
+                
+            });
+        });
+
+    </script>
     </body>
 </html>
