@@ -1,0 +1,37 @@
+<!-- ***** Main Banner Area Start ***** -->
+<div class="page-heading" id="top" style="margin-top:0;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="inner-content">
+                    <h2>Search Page</h2>
+                    <span style="display:none;">Awesome &amp; Creative HTML CSS layout by TemplateMo</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ***** Main Banner Area End ***** -->
+<section class="section" id="products">
+    <div class="container">
+        <form action="{{ routes.search_url }}">
+            <div class="input-group mb-3">
+                <input type="text" placeholder="Search.." name="q" value="{{ search.terms | escape }}" class="form-control form-control-lg">
+                <div class="input-group-append">
+                    <button class="btn btn-success" type="submit"> <i class="fa fa-search"></i> </button>
+                </div>
+            </div>
+        </form>
+        <div class="row">
+        {% for item in search.results %}
+           
+                {% if item.object_type == 'product' -%}        
+                    {% render 'product-item', product: item %}
+                {% else %}
+                    No Products Found
+                {% endif %}
+           
+        {% endfor %}    
+        </div>
+    </div>
+</section>
