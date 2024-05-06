@@ -1,0 +1,24 @@
+{
+    "sections": {
+      "main": {
+        "type": "about-us-banner",
+        "settings": {
+        }
+      },
+      "content": {
+        "type": "about-us-area",
+        "settings": {
+        }
+      },
+      "team-members": {
+        "type": "about-us-team",
+        "settings": {
+        }
+      }
+    },
+    "order": [
+      "main",
+      "content",
+      "team-members"
+    ]
+  }

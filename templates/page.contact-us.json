@@ -1,0 +1,18 @@
+{
+    "sections": {
+      "main": {
+        "type": "contact-us-banner",
+        "settings": {
+        }
+      },
+      "content": {
+        "type": "contact-us-area",
+        "settings": {
+        }
+      }
+    },
+    "order": [
+      "main",
+      "content"
+    ]
+  }
