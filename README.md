@@ -4,4 +4,4 @@ A Shopify Theme
 <br>
 Store Password: access_store
 Screenshot:
-<img src="assets/images/screenshot.png">
+<img src="assets/images/screenshot.jpeg">
