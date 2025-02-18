@@ -20,4 +20,5 @@ Screenshot:
   <li><a href="https://apps.shopify.com/loox">Loox ‑ Product Reviews App (Product Review)</a></li>
   <li><a href="https://apps.shopify.com/translate-and-adapt">Shopify Translate & Adapt (Multiple Language)</a></li>
   <li><a href="https://apps.shopify.com/doubly-currency-converter">BEAST Currency Converter (Multiple Currency)</a></li>
+  <li><a href="https://apps.shopify.com/backup">Rewind Backups (Backup)</a></li>
 </ol>
